@@ -2,6 +2,7 @@ package com.sitric.algorithms;
 
 import com.sitric.algorithms.binarySearch.BinarySearch;
 import com.sitric.algorithms.bubbleSort.BubbleSort;
+import com.sitric.algorithms.selectionSearch.SelectionSearch;
 import com.sitric.dataStructures.orderedArray.OrderedArray;
 
 import java.util.Arrays;
@@ -23,5 +24,8 @@ public class AlgorithmTest {
         int[] initialArray = new int[] {5, 1, 14, 8, 66, 2, 18, 79, 62, 31};
         BubbleSort bubbleSort = new BubbleSort();
         System.out.println(Arrays.toString(bubbleSort.sort(initialArray)));
+
+        SelectionSearch selectionSearch = new SelectionSearch();
+        System.out.println(Arrays.toString(selectionSearch.find(initialArray)));
     }
 }
