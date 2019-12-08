@@ -1,7 +1,9 @@
 package com.sitric.algorithms;
 
+import com.sitric.algorithms.api.SearchAlgorithm;
 import com.sitric.algorithms.binarySearch.BinarySearch;
 import com.sitric.algorithms.bubbleSort.BubbleSort;
+import com.sitric.algorithms.insertionSort.InsertionSearch;
 import com.sitric.algorithms.selectionSearch.SelectionSearch;
 import com.sitric.dataStructures.orderedArray.OrderedArray;
 
@@ -17,15 +19,17 @@ public class AlgorithmTest {
         array.insert(40);
         array.insert(50);
         array.insert(80);
-        System.out.println(array.toString());
+//        System.out.println(array.toString());
 
         BinarySearch search = new BinarySearch();
-        System.out.println(search.find(array.getOrderedArray(), 30));
+//        System.out.println(search.find(array.getOrderedArray(), 30));
         int[] initialArray = new int[] {5, 1, 14, 8, 66, 2, 18, 79, 62, 31};
         BubbleSort bubbleSort = new BubbleSort();
-        System.out.println(Arrays.toString(bubbleSort.sort(initialArray)));
+//        System.out.println(Arrays.toString(bubbleSort.sort(initialArray)));
 
-        SelectionSearch selectionSearch = new SelectionSearch();
-        System.out.println(Arrays.toString(selectionSearch.find(initialArray)));
+        SearchAlgorithm selectionSearch = new SelectionSearch();
+        SearchAlgorithm insertionSearch = new InsertionSearch();
+//        System.out.println(Arrays.toString(selectionSearch.sort(initialArray)));
+        System.out.println(Arrays.toString(insertionSearch.sort(initialArray)));
     }
 }

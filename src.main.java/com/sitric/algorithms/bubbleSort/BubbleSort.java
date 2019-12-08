@@ -1,12 +1,14 @@
 package com.sitric.algorithms.bubbleSort;
 
+import com.sitric.algorithms.api.SearchAlgorithm;
+
 /**
  * Bubble sort
  * complexity O(n^2)
  *
  * Инвариант: все элементы после out являются отсортированными
  */
-public class BubbleSort {
+public class BubbleSort implements SearchAlgorithm {
     public int[] sort(int[] initialArray) {
         for (int out = initialArray.length - 1; out > 0; out--) {
             for (int in = 0; in < out; in++) {
@@ -16,11 +18,5 @@ public class BubbleSort {
             }
         }
         return initialArray;
-    }
-
-    private void swap(int[] array, int from, int to) {
-        int temp = array[from];
-        array[from] = array[to];
-        array[to] = temp;
     }
 }
